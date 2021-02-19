@@ -32,3 +32,5 @@ array.forEach(item => console.log('correctAnswer', item.correctAnswer));
 console.log('****************************');
 console.log('Only correctAnswer === c');
 array.forEach(item => (item.correctAnswer === 'c' && console.log('correctAnswer === c: ',item.correctAnswer)));
+
+

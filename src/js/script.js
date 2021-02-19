@@ -26,4 +26,27 @@ const question4 = {
 };
 
 const arrayOfQuestions = [question1, question2, question3, question4];
+
+// console all correct answers
 arrayOfQuestions.forEach(item => console.log(`Correct answer for:  ${item.question}: `, item.correctAnswer));
+
+//array of correct answers
+const correctAnswers = [];
+for(let i of arrayOfQuestions){
+    correctAnswers.push(i.correctAnswer);
+}
+console.log('correctAnswers', correctAnswers);
+
+//function than check if answer is correct
+const checkAnswer = ( correctAnswers, answer) => {
+    return correctAnswers.includes(answer);
+}
+
+
+let answer = question4.answer1;
+let isCorrect = checkAnswer(correctAnswers, answer);
+console.log('isCorrect', isCorrect);
+
+answer = question4.correctAnswer;
+let isCorrect1 = checkAnswer(correctAnswers, answer);
+console.log('isCorrect1', isCorrect1);
