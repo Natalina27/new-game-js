@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>JS Game</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-<script src="js/script.js"></script>
+<div class="container">
+    <form id="quiz" class="quiz-container">
+        <h1>Quiz</h1>
+        <div id="q0" class="qa-container">
+            <div class="question"> Who invented JavaScript? </div>
+            <div class="answers"> <label>
+                <input type="radio" name="answer0" value="a">
+                a : Steve Jobs
+                </label>
+                <label>
+                <input type="radio" name="answer1" value="b">
+                b : Brendan Eich
+                </label>
+                <label>
+                <input type="radio" name="answer2" value="c">
+                c : David Bowie
+                </label>
+            </div>
+        </div>
+        <div id="q1" class="qa-container">
+            <div class="question"> When JS was created </div>
+            <div class="answers"> <label>
+                <input type="radio" name="answer0" value="a">
+                a : 1996
+                </label>
+                <label>
+                <input type="radio" name="answer1" value="b">
+                b : 1990
+                </label>
+                <label>
+                <input type="radio" name="answer2" value="c">
+                c : 2001
+                </label>
+            </div>
+        </div>
+        <div id="q2" class="qa-container">
+            <div class="question"> Are Java and JavaScript same? </div>
+            <div class="answers"> <label>
+                <input type="radio" name="answer0" value="a">
+                a : Yes
+                </label>
+                <label>
+                <input type="radio" name="answer1" value="b">
+                b : Almost
+                </label>
+                <label>
+                <input type="radio" name="answer2" value="c">
+                c : No
+                </label>
+            </div>
+        </div>
+
+        <button id="submit"> SUBMIT</button>
+    </form>
+
+    <form id="result" class="result-container">
+        <h1>RESULTS</h1>
+        <p>Your result is </p>
+    </form>
+</div>
+
+<script type="module" src="js/script.js"></script>
 <!--<script src="js/hw3.js"></script>-->
 <!--<script src="js/hw4.js"></script>-->
 </body>

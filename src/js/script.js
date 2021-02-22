@@ -1,52 +1,54 @@
-let num = '0';
-let score;
-const question1 = {
-    question: 'When JS was created and Hwo created it?  ',
-    answer1: '',
-    answer2: '',
-    correctAnswer: 'JS was created in 1995 by Brendan Eich'
-};
-const question2 = {
-    question: 'What is JavaScript?',
-    answer1: '',
-    answer2: '',
-    correctAnswer: 'JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language.'
-};
-const question3 = {
-    question: 'Are Java and JavaScript same?',
-    answer1: '',
-    answer2: '',
-    correctAnswer: 'No, Java and JavaScript are the two different languages. Java is a robust, secured and object-oriented programming language whereas JavaScript is a client side scripting language with some limitations.'
-};
-const question4 = {
-    question: 'What is ‘this’ keyword in JavaScript?',
-    answer1: '',
-    answer2: '',
-    correctAnswer: '‘This’ keyword refers to the object from where it was called.'
-};
+const quizForm = document.getElementById('quiz');
+const resultForm = document.getElementById('result');
+const submitButton = document.getElementById('submit');
 
-const arrayOfQuestions = [question1, question2, question3, question4];
+//
 
-// console all correct answers
-arrayOfQuestions.forEach(item => console.log(`Correct answer for:  ${item.question}: `, item.correctAnswer));
+const myQuestions = [
+    {
+        question: "Who invented JavaScript?",
+        answers: {
+            a: "Steve Jobs",
+            b: "Brendan Eich",
+            c: "David Bowie"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "When JS was created ?",
+        answers: {
+            a: "1996",
+            b: "1990",
+            c: "2001"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "Are Java and JavaScript same?",
+        answers: {
+            a: "Yes",
+            b: "Almost",
+            c: "No",
+        },
+        correctAnswer: "c"
+    }
+];
 
-//array of correct answers
-const correctAnswers = [];
-for(let i of arrayOfQuestions){
-    correctAnswers.push(i.correctAnswer);
+//
+const correctAnswers = myQuestions.map(item =>  item.correctAnswer);
+//
+
+const buildQuiz = () => {
+    //change html to js
 }
-console.log('correctAnswers', correctAnswers);
 
-//function than check if answer is correct
-const checkAnswer = ( correctAnswers, answer) => {
-    return correctAnswers.includes(answer);
+//
+
+export const showResults = () => {
+    //check quantity of correct answers
 }
 
 
-let answer = question4.answer1;
-let isCorrect = checkAnswer(correctAnswers, answer);
-console.log('isCorrect', isCorrect);
-
-answer = question4.correctAnswer;
-let isCorrect1 = checkAnswer(correctAnswers, answer);
-console.log('isCorrect1', isCorrect1);
+//
+buildQuiz();
+submitButton.addEventListener('click', showResults);
